@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>KIZEO test technique</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="modal.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+	<h1>Damien - TARAVELLIER</h1>
+	<h2>Test technique KIZEO</h2>
+	
+	<h3>Arborescence</h3>
+	<p>Le projet contient 5 fichiers:</p>
+	<ul>
+	    <li>index.html => le fichier actuel</li>
+	    <li>scripts.js => contient le javascript du projet</li>
+	    <li>style.css => contient le style CSS du projet</li>
+	    <li>modal.js => contient le javascript permettant d'afficher un modal</li>
+	    <li>modal.css => contient le CSS permettant d'afficher un modal</li>
+	</ul>
+	
+	<h3>Fonctionnement</h3>
+	<p>Tout d'abord il faut s'identifier en entrant son identifiant/mot de passe et le code de l'entrepise. En appuyant sur le bouton "transmettre" on va récupérer un token qui nous permettra ensuite d'afficher les formulaires</p>
+	
+	<h3>Travail effectué</h3>
+	<p>J'ai essayé de répondre à l'ensemble des demandes spécifiées dans le sujet, à savoir:</p>
+	<ul>
+	    <li>Connexion et récupération du token en AJAX via le bouton "transmettre". Le token est stocké à la fois dans une variable et aussi dans un cookie</li>
+	    <li>Affichage des différents formulaires à l'aide du bouton "afficher forms" après s'être identifié
+		<ul>
+		    <li>La liste des formulaires apparaît dans un tableau html, en entête se trouve les informations principales (ID, Nom, Class, date)</li>
+		    <li>La date apparaît au format FR long</li>
+		    <li>Les données peuvent être triées (ASC/DESC) à l'aide d'un simple clic sur les différents labels de l'entête du tableau</li>
+		    <li>Lors d'un clic sur une ligne du tableau, affiche les informations du formulaire associé en ouvrant un modal</li>
+		</ul>
+	    </li>
+	</ul>
+	
+	<h3>Technologies utilisées</h3>
+	<ul>
+	    <li>HTML</li>
+	    <li>CSS</li>
+	    <li>JAVASCRIPT</li>
+	    <li>AJAX</li>
+	    <li>jQuery</li>
+	</ul>
+	
+	<hr>
+	<h1>Exercice</h1>
+	<h3>1 - Récupération du token</h3>
+	<table>
+	    <tr>
+		<td><label for="identifiant">Identifiant</label></td>
+		<td><input type="text" placeholder="identifiant" value="stakiz" name="identifiant" id="identifiant" /></td>
+	    </tr>
+	    <tr>
+		<td><label for="mdp">Mdp</label></td>
+		<td><input type="text" placeholder="mdp" name="mdp" value="mdpstakizeo" id="mdp" /></td>
+	    </tr>
+	    <tr>
+		<td><label for="code">Code entreprise</label></td>
+		<td><input type="text" placeholder="code" name="code" value="STAKIZ" id="code" /></td>
+	    </tr>
+	    <tr>
+		<td colspan="2"><input type="submit" id="submit" name="submit" value="Transmettre" /></td>
+	    </tr>
+	</table>
+	<br>
+	<h3>2 - Afficher les Formulaires</h3>
+	<button id="displayForms" onclick="formsAction();">Afficher Forms</button>
+	<div id="forms"></div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="modal.js"></script>
+	<script src="scripts.js"></script>
+    </body>
+</html>

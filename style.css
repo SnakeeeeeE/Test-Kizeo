@@ -1,0 +1,42 @@
+.hidden{
+    display: none;
+}
+
+.jquery-modal.blocker.current .modal p{
+    word-break: break-word;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table#table_forms tr{
+    cursor: pointer;
+}
+
+table#table_forms :not(thead) tr:hover{
+    background: #6699ad;
+}
+
+table tr td{
+    padding: 5px;
+}
+
+a{
+    color: #000;
+}
+
+a:hover{
+    color: #461ea2;
+}
+
+thead th{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+thead th:hover{
+    color: #2e92ce;
+}
